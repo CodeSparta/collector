@@ -50,7 +50,7 @@ git:
 
 cloudctl_seed:
   - name: konductor
-    tag: latest
+    tag: "{{ lookup('env', 'TPDK_VERSION') | default('latest', true) }}"
     uri: "{{ koffer.src }}/cloudctl"
     path: "{{ dir.seed }}"
   - name: registry
@@ -73,7 +73,7 @@ cloudctl_images:
     tag: 3.2
     uri: "k8s.gcr.io"
   - name: konductor
-    tag: "latest"
+    tag: "{{ lookup('env', 'TPDK_VERSION') | default('latest', true) }}"
     uri: "{{ koffer.src }}/cloudctl"
   - name: coredns
     tag: latest
