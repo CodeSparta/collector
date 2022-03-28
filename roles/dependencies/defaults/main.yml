@@ -7,7 +7,7 @@ koffer:
 openshift:
   release: "{{  lookup('env', 'VERSION')     | default('latest', true) }}"
   release_url: "https://mirror.openshift.com/pub/openshift-v4/clients/ocp"
-  rhcos_url: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest/latest"
+  rhcos_url: "https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/latest"
 dir:
   platform: '/root/platform'
   meta: '/root/platform/meta'
